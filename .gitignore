@@ -7,7 +7,6 @@
 *.la
 *.lai
 *.so
-*.dll
 *.dylib
 
 # Qt-es
@@ -36,5 +35,37 @@ Makefile*
 # QtCtreator CMake
 CMakeLists.txt.user
 
+
 debug/*
 release/*
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+
+setup/build/*

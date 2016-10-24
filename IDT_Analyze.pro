@@ -11,10 +11,11 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = IDT_Analyze
 TEMPLATE = app
 
+INCLUDEPATH +=  src
 
-SOURCES += main.cpp\
-        MainWindow.cpp
+SOURCES +=  src/main.cpp\
+            src/MainWindow.cpp
 
-HEADERS  += MainWindow.h
+HEADERS +=  src/MainWindow.h
 
-FORMS    += main.ui
+FORMS   +=  ui/main.ui
