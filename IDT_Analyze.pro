@@ -9,7 +9,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = IDT_Analyze
-TEMPLATE = app
+TEMPLATE = vcapp
 
 INCLUDEPATH +=  src
 
@@ -19,3 +19,15 @@ SOURCES +=  src/main.cpp\
 HEADERS +=  src/MainWindow.h
 
 FORMS   +=  ui/main.ui
+
+CONFIG(release, debug|release) {
+    UI_DIR = release
+    RCC_DIR = release
+    MOC_DIR = release
+    OBJECTS_DIR = release
+} else {
+    UI_DIR = debug
+    RCC_DIR = debug
+    MOC_DIR = debug
+    OBJECTS_DIR = debug
+}
