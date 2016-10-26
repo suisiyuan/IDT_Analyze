@@ -27,6 +27,7 @@
     <property name="title">
      <string>文件</string>
     </property>
+    <addaction name="actionOpen"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -35,12 +36,26 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="../res.qrc">
+     <normaloff>:/res/images/open.png</normaloff>:/res/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../res.qrc"/>
+ </resources>
  <connections/>
 </ui>
