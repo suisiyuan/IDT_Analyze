@@ -3,6 +3,13 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QSettings>
+#include <QDebug>
+
+// ui
+#include <QMenu>
+
+#include "app.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,7 +26,16 @@ public:
 private:
     Ui::MainWindow *ui;
 
+	QSettings settings;
+
+	void initMenuAndToolbar();
+	
+
 private slots:
 	void on_actionOpen_triggered();
+	void on_actionSave_triggered();
+	void on_actionSaveAs_triggered();
+	void on_actionSaveImage_triggered();
+	void on_actionExit_triggered();
 };
 
