@@ -11,12 +11,4 @@
 
 #define MAX_RECENT_FILES	10
 
-#ifdef Q_OS_WIN32
-#define DEFAULT_FOLDER  (QString("C:/") + COMPANY_NAME)	
-#endif // Q_OS_WIN32
-
-#ifdef Q_OS_LINUX
-#define DEFAULT_FOLDER  (QString("~/") + COMPANY_NAME)	
-#endif // Q_OS_LINUX
-
 

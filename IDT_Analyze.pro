@@ -17,7 +17,7 @@ SOURCES +=  src/main.cpp\
             src/MainWindow.cpp
 
 HEADERS +=  src/MainWindow.h\
-			src/app.h
+            src/app.h
 
 FORMS   +=  ui/main.ui
 
