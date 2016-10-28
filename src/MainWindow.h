@@ -6,9 +6,6 @@
 #include <QSettings>
 #include <QDebug>
 
-// ui
-#include <QMenu>
-
 #include "app.h"
 
 namespace Ui {
