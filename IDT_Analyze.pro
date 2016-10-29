@@ -14,10 +14,12 @@ TEMPLATE = app
 INCLUDEPATH +=  src
 
 SOURCES +=  src/main.cpp\
-            src/MainWindow.cpp
+            src/MainWindow.cpp \
+    DbHandler.cpp
 
 HEADERS +=  src/MainWindow.h\
-            src/app.h
+            src/app.h \
+    DbHandler.h
 
 FORMS   +=  ui/main.ui
 
