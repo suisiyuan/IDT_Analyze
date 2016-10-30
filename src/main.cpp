@@ -19,8 +19,10 @@ int main(int argc, char *argv[])
 #ifdef Q_OS_LINUX
     QString path = QProcessEnvironment::systemEnvironment().value("HOME") + "/" + COMPANY_NAME;
 #endif
+	// 设置默认路径
 	if (!settings.contains(DEFAULT_PATH_REG))
         settings.setValue(DEFAULT_PATH_REG, QVariant(path));
+	// 保存最近文件路径
 	if (!settings.contains(RECENT_FILES_REG))
 		settings.setValue(RECENT_FILES_REG, QVariant(QStringList()));
 
