@@ -3,7 +3,8 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+	dbHander(Q_NULLPTR)
 {
     ui->setupUi(this);
 
@@ -13,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+	delete dbHander;
 }
 
 
@@ -31,6 +33,13 @@ void MainWindow::on_actionOpen_triggered()
 		QString dirpath = dialog.directory().path();
 		QStringList recentFiles = settings.value(RECENT_FILES_REG).toStringList();
 
+		// 建立数据库处理类
+		dbHander = new DbHandler(filepath, this);
+		ui->label->setPixmap(dbHander->getBigImage(0));
+
+
+
+		// 设置注册表
 		settings.setValue(DEFAULT_PATH_REG, QVariant(dirpath));
 		qint8 result = recentFiles.indexOf(filepath);
 		if (-1 == result)

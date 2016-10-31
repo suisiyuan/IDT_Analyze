@@ -5,8 +5,10 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QDebug>
+#include <QLabel>
 
 #include "app.h"
+#include "DbHandler.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +24,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+	DbHandler *dbHander;
 
 	QSettings settings;
 
