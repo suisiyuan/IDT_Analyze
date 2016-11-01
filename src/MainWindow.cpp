@@ -35,9 +35,7 @@ void MainWindow::on_actionOpen_triggered()
 
 		// 建立数据库处理类
 		dbHander = new DbHandler(filepath, this);
-		ui->label->setPixmap(dbHander->getBigImage(0));
-
-
+		//ui->label->setPixmap(dbHander->getBigImage(0));
 
 		// 设置注册表
 		settings.setValue(DEFAULT_PATH_REG, QVariant(dirpath));

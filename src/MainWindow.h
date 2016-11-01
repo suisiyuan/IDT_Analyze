@@ -5,7 +5,6 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QDebug>
-#include <QLabel>
 
 #include "app.h"
 #include "DbHandler.h"
